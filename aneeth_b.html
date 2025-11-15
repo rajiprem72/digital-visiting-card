@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Digital Contact</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 20px;
+    }
+    .card {
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      padding: 20px;
+      display: inline-block;
+      background: #f9f9f9;
+    }
+    img {
+      border-radius: 50%;
+      width: 120px;
+      height: 120px;
+    }
+    .info { margin-top: 10px; }
+    button {
+      background: #0b5cff;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+      margin-top: 15px;
+    }
+    button:disabled {
+      background: #aaa;
+      cursor: not-allowed;
+    }
+  </style>
+ <link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#2E86C1">
+ 
+</head>
+<body>
+
+  <div class="card">
+    <img src="images/aneeth_b.jpg" alt="Profile Photo">
+    <div class="info">
+      <h2>Aneeth B</h2>
+      <p>Designation: Managing Director</p>
+      <p>Company: MAXIM SAFETY SOLUTIONS</p>
+      <p>📞 +91-98846 07430</p>
+      <p>📞 +91-98846 07430</p>
+      <p>✉️ maximsafetysolutions@gmail.com</p>
+      <p>🌐 <a href="https://www.indiamart.com/maxim-safetysolutions/">Product Catalog:</a></p>
+      <p>📍Swarna Mandhir, Old No. 6, New No. 13,Ground Floor, Mahalakshmi Street, Karumari Amman Nagar, Ayapakkam, Landmark: Near Bhavani Nagar & behind Dharsini Apartment, Chennai; Tamil Nadu ;600077;India</p>
+    </div>
+    <a id="downloadLink" href="aneeth_b.vcf" download="aneeth_b.vcf">
+      <button id="addBtn">Add Contact</button>
+    </a>
+  </div>
+
+  <script>
+    // Disable Add Contact button on desktop
+    function isMobile() {
+      return /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+    }
+
+    window.onload = function() {
+      const addBtn = document.getElementById("addBtn");
+      if (!isMobile()) {
+        addBtn.disabled = true;
+      }
+    }
+  </script>
+
+</body>
+</html>
